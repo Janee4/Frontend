@@ -1,4 +1,4 @@
-﻿@page "/signup"@*Vad sidan heter*@
+﻿@page "/signup"
 
 @using System.ComponentModel.DataAnnotations
 @using System.Text
@@ -9,7 +9,6 @@
 
 @inject UserManager<ApplicationUser> UserManager
 @inject SignInManager<ApplicationUser> SignInManager
-
 @inject ILogger<Register> Logger
 @inject NavigationManager NavigationManager
 
@@ -55,7 +54,7 @@
 
     public async Task RegisterUser(EditContext editContext)
     {
-        var user = new ApplicationUser { UserName = Input.Email, Email = Input.email };
+        var user = new ApplicationUser { UserName = Input.Email, Email = Input.Email };
 
         //usermanager som ska skapa en användare, om den inte lyckas så gör den en return
         var result = await UserManager.CreateAsync(user, Input.Password);
@@ -66,11 +65,14 @@
         //om man måste en confirmationmail så gör vi en redirect:
         if (UserManager.Options.SignIn.RequireConfirmedAccount)
         {
-            NavigationManager.NavigateTo($"confirm?Email={user.Email}");
+            NavigationManager.NavigateTo($"confirm?email={user.Email}");
+        }
+        else
+        {
+            await SignInManager.SignInAsync(user, isPersistent: false);
+            NavigationManager.NavigateTo(ReturnUrl ?? "/");
         }
 
-        await SignInManager.SignInAsync(user, isPersistent: false);
-        NavigationManager.NavigateTo(ReturnUrl ?? "/");
     }
 
 
