@@ -1,6 +1,6 @@
+using Frontend;
 using Frontend.Client.Pages;
 using Frontend.Components;
-using Frontend.Components.Account;
 using Frontend.Data;
 using Microsoft.AspNetCore.Components.Authorization;
 using Microsoft.AspNetCore.Identity;
