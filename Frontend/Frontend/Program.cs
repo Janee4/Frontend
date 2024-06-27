@@ -36,7 +36,7 @@ builder.Services.AddIdentityCore<ApplicationUser>(options => options.SignIn.Requ
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
+// Configure the HTTP request pipeline..
 if (app.Environment.IsDevelopment())
 {
     app.UseWebAssemblyDebugging();
