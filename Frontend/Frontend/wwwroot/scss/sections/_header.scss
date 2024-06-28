@@ -1,0 +1,184 @@
+﻿header {
+    .container {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        overflow: hidden;
+
+        .silicon-logo {
+            margin-left: 1rem;
+            margin-top: 1rem;
+            display: flex;
+
+            @media (min-width: 1575px) {
+                display: flex;
+                margin-left: 20rem;
+                margin-top: 1rem;
+            }
+
+            .nav-bar {
+                @media (min-width: 1575px) {
+                    display: block;
+                    height: 2rem;
+                    margin-left: 3rem;
+                    margin-top: 0.7rem;
+                }
+
+                a {
+                    display: none;
+                    text-decoration: none;
+                    color: #000000da;
+                    margin-right: 2rem;
+                    font-family: "Manrope", sans-serif;
+                    font-weight: 600;
+
+                    @media (min-width: 1575px) {
+                        display: inline-block;
+                    }
+                }
+
+                i {
+                    margin-left: 1rem;
+                    margin-top: 0.6rem;
+                    font-size: 25px;
+
+                    @media (min-width: 1575px) {
+                        display: none;
+                    }
+                }
+            }
+        }
+
+        .right-side {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            position: relative;
+            padding: 1.1rem 0rem;
+
+            @media (min-width: 1575px) {
+                margin-right: 20rem;
+            }
+
+            .toggle-box {
+                display: flex;
+                background-color: #fff;
+                margin: 0.5rem;
+                gap: 0.5rem;
+                height: 2rem;
+
+                @media (min-width: 1575px) {
+                    position: relative;
+                    margin-right: 4rem;
+                    gap: 1rem;
+                }
+
+                p {
+                    display: none;
+
+                    @media (min-width: 1575px) {
+                        display: block;
+                        margin-top: 2px;
+                        font-size: 16px;
+                        font-family: "Manrope", sans-serif;
+                        font-weight: 600;
+                    }
+                }
+
+                i {
+                    margin-top: 5px;
+
+                    @media (min-width: 1575px) {
+                        display: none;
+                    }
+                }
+
+                #check {
+                    display: none;
+                    position: relative;
+                }
+
+                .button {
+                    background-color: #454661d0;
+                    width: 40px;
+                    height: 20px;
+                    margin-top: 0.2rem;
+                    border-radius: 200px;
+                    cursor: pointer;
+                    box-shadow: 0 8px 12px rgba(54, 59, 122, 0.199);
+                }
+
+                .button::before {
+                    position: absolute;
+                    content: '';
+                    background-color: #fff;
+                    width: 18px;
+                    height: 18px;
+                    border-radius: 200px;
+                    margin: 1px;
+                }
+
+                input:checked + .button {
+                    background-color: #20096d;
+                }
+
+                input:checked + .button::before {
+                    transform: translateX(-20px);
+                    transform: translateX(20px);
+                }
+            }
+
+            .account-buttons {
+                display: flex;
+                gap: 10px;
+                align-items: center;
+
+                .sign-in-btn,
+                .sign-up-btn {
+                    text-decoration: none;
+                    color: #ffffff;
+                    padding: 10px 20px;
+                    border-radius: 5px;
+                    cursor: pointer;
+                    font-family: "Manrope", sans-serif;
+                    font-weight: 600;
+                    display: flex;
+                    align-items: center;
+
+                    i {
+                        margin-right: 5px;
+                    }
+                }
+
+                .sign-in-btn {
+                    background-color: #EFF2FC;
+                    color: #33354D;
+                }
+
+                .sign-up-btn {
+                    background-color: #6366F1;
+                }
+
+                .sign-in-btn:hover,
+                .sign-up-btn:hover {
+                    transform: scale(1.05);
+                    transition: transform 0.2s ease-in-out;
+                }
+            }
+
+            .profile-image {
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                overflow: hidden;
+                margin-right: 10px;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+        }
+    }
+}

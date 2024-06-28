@@ -1,0 +1,218 @@
+﻿/* Base styles */
+.courses {
+
+    .container {
+
+
+        .title-form-div {
+            display: flex;
+            align-items: center;
+            margin-left: 170px;
+            margin-top: 100px;
+            margin-bottom: 30px;
+        }
+
+
+        h1 {
+            color: #0B0F19;
+            font-size: 40px;
+            font-weight: 900;
+            margin-left: 380px;
+        }
+
+        .categories-to-right {
+            margin-left: 501px;
+        }
+
+        form#form-filters {
+            display: flex; /* Använd flexbox för att rada elementen bredvid varandra */
+            align-items: center; /* Centrera vertikalt */
+            margin-bottom: 20px; /* Lägg till lite marginal under formuläret */
+
+            select {
+                margin-right: 20px;
+                padding: 10px 80px 10px 20px;
+                border-color: #D4D7E5;
+                border-radius: 6px;
+                color: #565973;
+            }
+
+            .input-search-group {
+                position: relative;
+
+
+
+
+                input#searchQuery {
+                    border-color: #E2E5F1;
+                    border-radius: 6px;
+                    padding: 10px 60px 10px 20px;
+                }
+
+                i.fa-regular.fa-search {
+                    position: absolute;
+                    right: 20px;
+                    top: 15px;
+                }
+            }
+        }
+
+        .course-items {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            grid-template-columns: (3, 1fr);
+            margin-right: 550px;
+            margin-left: 550px;
+
+
+            .course {
+                width: calc(33.33% - 10px); /* Anpassa bredden för varje kurs */
+                margin-bottom: 20px; /* Justera marginalen mellan kurser */
+
+                position: relative;
+
+                .bestseller {
+                    position: absolute;
+                    background-color: #22C55E;
+                    padding: 2px 5px;
+                    border-radius: 4px;
+                    color: white;
+                    left: 25px;
+                    top: 10px;
+                }
+
+                .btn.btn-circle.bookmark {
+                    position: absolute;
+                    left: 300px;
+                    top: 19px;
+                    background: white;
+                    border-radius: 50%;
+                    padding: 9px 14px 7px;
+                    color: #33354D;
+                    cursor: pointer;
+                }
+
+                img {
+                    max-width: 100%; /* Begräns bildens bredd till 100% av dess förälders bredd */
+                    height: auto; /* Tillåt bildens höjd att justeras automatiskt för att behålla proportioner */
+                    max-height: 180px; /* Begräns maxhöjden på bilderna till 150px */
+                    width: 360px;
+                    object-fit: cover;
+                }
+
+                .content {
+                    padding-left: 35px;
+                    padding-right: 35px;
+                    border: 1px solid #ccc; /* Lägg till en solid grå kant runt innehållet */
+                    border-top: none; /* Ta bort toppkanten för att undvika dubbel kant med bilden */
+                    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+                    width: 375px;
+
+                    .title {
+                        color: black;
+                        font-weight: 700;
+                        padding-top: 20px;
+                        font-size: 19px;
+                    }
+
+                    .author {
+                        color: #565973;
+                        font-size: 14px;
+                        padding-top: 10px;
+                        padding-bottom: 10px;
+                    }
+
+                    .pricing {
+                        color: #6366F1;
+                        font-weight: 700;
+                        font-size: 16px;
+                        border-bottom: 1px solid #ccc;
+                        padding-bottom: 10px;
+
+
+                        .discount {
+                            /* Discount price styles */
+                        }
+
+                        .price {
+                            font-size: 17px;
+                            font-weight: bold;
+                        }
+                    }
+
+                    .footer {
+                        display: flex; /* Använd flexbox för att placera "hours" och "likes" bredvid varandra */
+                        align-items: center;
+                        gap: 20px;
+
+                        .hours {
+                            padding-top: 10px;
+                            padding-bottom: 10px;
+                            color: #9397AD;
+                        }
+
+                        .likes {
+                            color: #9397AD;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .work-with-us {
+
+
+        .container {
+            display: flex;
+            justify-content: center;
+            margin-top: 5rem;
+            background-color: #F3F6FF;
+            gap: 5rem;
+            align-items: center;
+            height: 50vh;
+
+
+            .left-side {
+                flex-direction: column;
+                text-align: left;
+
+
+                h5 {
+                    color: #565973;
+                    font-size: 18px;
+                    font-weight: bold;
+                    margin-bottom: 10px;
+                }
+
+                h1 {
+                    margin-left: -1px;
+                }
+
+                button {
+                    margin-top: 30px;
+                    background-color: #6366F1;
+                    border-radius: 8px;
+                    padding: 14px 28px;
+                    border: none;
+                    color: #FFFFFF;
+
+                    &:hover {
+                        background-color: black;
+                        cursor: pointer;
+                    }
+                }
+            }
+
+            .right-side {
+
+                img {
+                    max-width: 100%;
+                    height: auto;
+                }
+            }
+        }
+    }
+}
+

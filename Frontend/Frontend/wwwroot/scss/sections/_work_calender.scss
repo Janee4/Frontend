@@ -1,0 +1,68 @@
+﻿.work-calender {
+
+    .container {
+        display: flex;
+        justify-content: center;
+        gap: 10rem;
+
+        @media (min-width: 1200px) {
+            gap: 10rem;
+        }
+
+        .calender {
+            display: none;
+
+            @media (min-width: 1200px) {
+                display: block;
+            }
+        }
+
+        .manage-work {
+            padding-top: 8rem;
+
+            h2 {
+                font-family: "Manrope", sans-serif;
+                font-weight: 900;
+                color: #0B0F19;
+                font-size: 34px;
+                padding-bottom: 2rem;
+            }
+
+            .check-yes {
+                display: flex;
+                gap: 10px;
+                padding-bottom: 18px;
+                align-items: center;
+
+                i {
+                    color: #6366F1;
+                }
+
+                p {
+                    font-weight: 700;
+                    color: #565973;
+                    font-family: "Manrope", sans-serif;
+                }
+            }
+
+            button {
+                padding: 14px 35px;
+                margin-top: 1rem;
+                border: none;
+                border-radius: 6px;
+                background-color: #6366F1;
+                color: #FFFFFF;
+
+                &:hover {
+                    background-color: black;
+                    cursor: pointer;
+                }
+
+                i {
+                    margin-left: 5px;
+                    padding-right: 4px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,96 @@
+﻿.task-organizer {
+    background-color: #F3F6FF;
+
+    .container {
+        height: auto;
+        margin: auto;
+        overflow-x: hidden;
+        display: block;
+
+        @media (min-width: 1250px) {
+            height: 950px;
+        }
+
+        .tool-headline {
+            text-align: center;
+            margin: 0 auto;
+
+            h2 {
+                font-family: "Manrope", sans-serif;
+                font-size: 40px;
+                font-weight: 900;
+                margin-top: 5rem;
+                margin-bottom: 1.5rem;
+            }
+
+            p {
+                font-family: "Manrope", sans-serif;
+                font-size: 17px;
+                font-weight: 600;
+                color: #9397AD;
+                text-align: center;
+                line-height: 26px;
+            }
+        }
+
+        .task-boxes {
+            display: grid;
+            grid-template-columns: repeat(3, auto);
+            justify-content: center;
+            margin-top: 5rem;
+
+            @media (max-width: 768px) {
+                grid-template-columns: repeat(2, auto);
+            }
+
+            @media (max-width: 480px) {
+                grid-template-columns: 1fr;
+            }
+
+            .box-task {
+                text-align: center;
+                padding: 50px 35px;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: white;
+                }
+            }
+
+            .box-task h6 {
+                font-family: "Manrope", sans-serif;
+                font-size: 22px;
+                font-weight: 900;
+                margin-bottom: 1rem;
+            }
+
+            .box-task p {
+                word-wrap: break-word;
+                font-family: "Manrope", sans-serif;
+                font-size: 16px;
+                font-weight: 700;
+                color: #565973;
+            }
+
+            .task-2 {
+                border-left: 1px solid #E2E5F1;
+                border-right: 1px solid #E2E5F1;
+            }
+
+            .task-3 {
+                background-color: white;
+                border-radius: 10px;
+            }
+
+            .task-4 {
+                border-top: 1px solid #E2E5F1;
+            }
+
+            .task-5 {
+                border-left: 1px solid #E2E5F1;
+                border-right: 1px solid #E2E5F1;
+                border-top: 1px solid #E2E5F1;
+            }
+        }
+    }
+}

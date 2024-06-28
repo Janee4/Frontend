@@ -1,0 +1,26 @@
+﻿@import 'scss/core/_fonts.scss';
+@import 'scss/core/_variables.scss';
+@import 'scss/core/_mixings.scss';
+@import 'scss/core/_common.scss';
+@import 'scss/core/_typography.scss';
+
+@import 'scss/components/_alerts.scss';
+@import 'scss/components/_buttons.scss';
+@import 'scss/components/_links.scss';
+@import 'scss/components/_containers.scss';
+@import 'scss/components/_forms.scss';
+
+@import 'scss/sections/_account_details.scss';
+@import 'scss/sections/_account_profile.scss';
+@import 'scss/sections/_courses.scss';
+@import 'scss/sections/_app_download.scss';
+@import 'scss/sections/_footer.scss';
+@import 'scss/sections/_header.scss';
+@import 'scss/sections/_split_screen.scss';
+@import 'scss/sections/_subscribe_to_newsletter.scss';
+@import 'scss/sections/_task_management.scss';
+@import 'scss/sections/_task_organizer.scss';
+@import 'scss/sections/_work_calender.scss';
+@import 'scss/sections/_work_tools.scss';
+@import 'scss/sections/_signin.scss';
+@import 'scss/sections/_signup.scss';

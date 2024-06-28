@@ -1,0 +1,195 @@
+﻿.account-details {
+    margin-left: 400px;
+    margin-top: 10px;
+
+    .container {
+        display: flex;
+
+        .form-container {
+            flex: 1; /* För att fylla resten av utrymmet */
+            margin-bottom: 100px; /* Lägg till lite utrymme under "Bio (optional)" -fältet */
+            margin-left: 0px;
+        }
+
+        form {
+            flex: 1;
+            max-width: 500px;
+            margin: 0 auto;
+            padding-right: 20px; /* Justera höger padding för att flytta formuläret mot vänster */
+
+            border-left: 1px solid #ccc; /* Lägger till en vänsterkant för att skapa en linje mellan "profile" och formuläret */
+
+            margin-left: 0px; /* Lägger till lite utrymme mellan linjen och formuläret */
+            padding-left: 100px;
+            flex: 10 10 10%;
+
+            h3 {
+                line-height: 160%;
+                font-weight: 400;
+                color: #565973;
+                font-family: "Manrope", sans-serif;
+                font-weight: 800;
+                color: #0B0F19;
+                font-size: 28px !important;
+            }
+
+            h5 {
+                color: #6366F1;
+                line-height: 160%;
+                font-weight: 400;
+                color: #6366F1;
+                font-family: "Manrope", sans-serif;
+                font-weight: 800;
+                font-size: 20px !important;
+            }
+        }
+
+        .form-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start; /* Justera vertikalt centrerad innehåll */
+            margin-bottom: 20px;
+
+            .form-group-2 {
+                flex: none; /* Avbryter flex-grow, flex-shrink, och flex-basis */
+                flex-basis: calc(47% - 5px); /* Ställer in bredden på formgrupperna med mellanrum */
+                margin-right: 50px;
+            }
+        }
+
+
+        .form-group {
+            flex: none; /* Avbryter flex-grow, flex-shrink, och flex-basis */
+            flex-basis: calc(100% - 5px); /* Ställer in bredden på formgrupperna med mellanrum */
+            margin-right: 50px;
+        }
+
+        .bio {
+            height: 100px;
+            text-align: left;
+        }
+
+        .bio::placeholder {
+            text-align: left; /* Placera placeholder-texten till vänster */
+        }
+
+
+        .bio-div {
+            width: 800px;
+
+            input {
+                padding-bottom: 90px;
+            }
+        }
+
+        .buttons-div {
+            display: flex;
+        }
+
+        .btn-cancel {
+            border-radius: 6px;
+            text-align: center;
+            font-size: 14px;
+            padding: 0px 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 12px;
+            background: #EFF2FC;
+            color: #33354D;
+            border: none;
+            margin-right: 10px;
+            padding-top: 8px;
+            padding-bottom: 9px;
+        }
+
+        .btn-save-changes {
+            border-radius: 6px;
+            text-align: center;
+            font-size: 14px;
+            padding: 0px 22px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 12px;
+            box-shadow: 0px 8px 18px -8px rgba(99, 102, 241, 0.9);
+            background: #6366F1;
+            color: #FFFFFF;
+            padding-top: 8px;
+            padding-bottom: 9px;
+        }
+
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: black;
+            font-weight: 600;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+        /* Basic Styles */
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .form-2 {
+            width: 800px;
+
+            .form-row-2 {
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-start;
+                margin-bottom: 20px;
+            }
+
+
+            .form-group {
+                flex: none; /* Avbryter flex-grow, flex-shrink, och flex-basis */
+                flex-basis: calc(100% - 5px); /* Ställer in bredden på formgrupperna med mellanrum */
+                margin-right: 50px;
+            }
+
+            .bio-div {
+                width: 800px;
+                margin-bottom: 20px;
+            }
+
+            h5 {
+                margin-top: 50px;
+                color: #6366F1;
+                position: relative; /* Gör positionen relativ till h5-elementet */
+                padding-top: 20px; /* Lägg till lite padding för att ge utrymme mellan gränsen och texten */
+            }
+
+            h5::before {
+                content: ""; /* Skapar ett pseudoelement */
+                position: absolute; /* Gör positionen absolut för att kunna placera det exakt */
+                top: 0; /* Placera det i början av h5-elementet */
+                left: 0; /* Placera det längst till vänster */
+                width: 100%; /* Låt bredden sträcka sig över hela bredden av h5-elementet */
+                border-top: solid 1px #ccc; /* Applicera gränsen */
+            }
+        }
+    }
+}

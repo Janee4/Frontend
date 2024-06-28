@@ -1,0 +1,72 @@
+﻿.task-management {
+
+    .container {
+        display: flex;
+        overflow: hidden;
+        position: relative;
+
+        .management-headline {
+            padding: 8rem 20rem;
+
+            h1 {
+                font-family: "Manrope", sans-serif;
+                font-size: 56px;
+                font-weight: 800;
+                line-height: 72.8px;
+                color: #0B0F19;
+                padding-bottom: 2rem;
+            }
+
+            p {
+                font-family: "Manrope", sans-serif;
+                font-size: 18px;
+                font-weight: 400;
+                line-height: 28.8px;
+                color: #565973;
+                padding-bottom: 3rem;
+            }
+
+            .btn-get-started {
+                background-color: #6366F1E5;
+                padding: 12px 30px;
+                border: none;
+                border-radius: 5px;
+                font-family: "Manrope", sans-serif;
+                font-size: 16px;
+                font-weight: 600;
+                color: #FFFFFF;
+                cursor: pointer;
+            }
+
+            .btn-get-started:hover {
+                transform: scale(1.05);
+                transition: transform 0.2s ease-in-out;
+            }
+
+            h5 {
+                margin-top: 6rem;
+                margin-bottom: 2rem;
+                font-family: "Manrope", sans-serif;
+                font-size: 17px;
+                font-weight: 900;
+            }
+
+            .company-logos {
+                display: flex;
+
+                img {
+                    margin-right: 2rem;
+                }
+            }
+        }
+
+        .task-image {
+            position: absolute;
+            right: 0;
+
+            @media (max-width: 1900px) {
+                display: none;
+            }
+        }
+    }
+}

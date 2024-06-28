@@ -1,0 +1,58 @@
+﻿.signUp {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+
+    .container {
+    }
+
+    .alert {
+    }
+
+    form {
+    }
+
+    H1 {
+        color: #0B0F19;
+        font-weight: 900;
+        font-size: 40px;
+        font-family: "Manrope", sans-serif;
+        margin-bottom: 1rem;
+    }
+
+    p {
+        font-family: "Manrope", sans-serif;
+        color: #0B0F19;
+        margin-bottom: 1rem;
+    }
+
+    .form-content {
+    }
+
+    .input-group {
+    }
+
+    label {
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    input[type="checkbox"] {
+    }
+
+    button {
+    }
+
+    .checkbox-group {
+    }
+
+    span.validation-message {
+    }
+
+    @media (max-width: 768px) {
+        .container {
+        }
+    }
+}

@@ -1,0 +1,118 @@
+﻿.app-download {
+    background-color: #F3F6FF;
+
+    .container {
+        display: flex;
+        justify-content: center;
+
+
+        .center-phones {
+            background-color: #EFF2FC;
+            width: 85rem;
+            height: 45rem;
+            display: flex;
+            justify-content: center;
+            gap: 13rem;
+
+            .phone-screen {
+
+                img {
+                    margin-top: 4rem;
+                }
+            }
+
+            .any-service {
+                display: flex;
+                flex-direction: column;
+                margin-top: 8rem;
+                gap: 2.5rem;
+
+                h1 {
+                    font-family: "Manrope", sans-serif;
+                    font-size: 40px;
+                    font-weight: 900;
+                    color: #0B0F19;
+                }
+
+                .app-store {
+                    display: flex;
+                    gap: 3rem;
+
+
+                    .editor-choice {
+
+
+                        p {
+                            font-family: "Manrope", sans-serif;
+                            font-weight: 600;
+                            color: #9397AD;
+                            margin-bottom: 10px;
+                        }
+
+                        h3 {
+                            font-family: "Manrope", sans-serif;
+                            font-weight: 900;
+                            font-size: 24px;
+                            color: #0B0F19;
+                            margin-bottom: 10px;
+                        }
+
+                        #ratings {
+                            font-family: "Manrope", sans-serif;
+                            font-weight: 700;
+                            color: #565973;
+                        }
+
+                        i {
+                            color: #FFBA08;
+                            margin-bottom: 15px;
+                            font-size: 11.5px;
+                        }
+                    }
+
+                    a {
+                        margin-top: 4.5rem;
+                    }
+                }
+
+                .google-play {
+                    display: flex;
+                    gap: 3.5rem;
+
+                    .app-of-day {
+                        p {
+                            font-family: "Manrope", sans-serif;
+                            font-weight: 600;
+                            color: #9397AD;
+                            margin-bottom: 10px;
+                        }
+
+                        h3 {
+                            font-family: "Manrope", sans-serif;
+                            font-weight: 900;
+                            font-size: 24px;
+                            color: #0B0F19;
+                            margin-bottom: 10px;
+                        }
+
+                        #ratings {
+                            font-family: "Manrope", sans-serif;
+                            font-weight: 700;
+                            color: #565973;
+                        }
+
+                        i {
+                            color: #FFBA08;
+                            font-size: 11.5px;
+                            margin-bottom: 15px;
+                        }
+                    }
+
+                    a {
+                        margin-top: 4.5rem;
+                    }
+                }
+            }
+        }
+    }
+}

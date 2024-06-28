@@ -1,0 +1,64 @@
+﻿.work-tools {
+
+    .container {
+        display: block;
+        padding-bottom: 2rem;
+
+
+        .tools-headline {
+            text-align: center;
+            margin-top: 5rem;
+            margin-bottom: 6rem;
+
+            h1 {
+                font-family: "Manrope", sans-serif;
+                font-size: 40px;
+                font-weight: 900;
+                margin-top: 5rem;
+                margin-bottom: 1.5rem;
+            }
+
+            p {
+                font-family: "Manrope", sans-serif;
+                font-size: 17px;
+                font-weight: 600;
+                color: #9397AD;
+                text-align: center;
+                line-height: 26px;
+            }
+        }
+
+        .integrate-tools {
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+            text-align: center;
+            margin: auto;
+            gap: 0rem;
+            width: 100vh;
+
+            .tool-box {
+                text-align: left;
+                margin: auto;
+                padding: 30px 20px;
+                cursor: pointer;
+
+                &:hover {
+                    border: solid 1px #565973;
+                    border-radius: 5px;
+                    box-shadow: 0 1px 4px #5659738c;
+                    border-color: transparent;
+                }
+
+                img {
+                    margin-bottom: 1.5rem;
+                }
+
+                p {
+                    font-family: "Manrope", sans-serif;
+                    font-weight: 700;
+                    color: #565973;
+                }
+            }
+        }
+    }
+}
