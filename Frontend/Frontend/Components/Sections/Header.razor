@@ -1,0 +1,53 @@
+﻿<header>
+    <div class="container">
+        <div class="silicon-logo">
+            <a asp-action="Home" asp-controller="Default">
+                <img src="images/logos/sillicons-logo.svg" alt="Sillicon">
+            </a>
+            <nav class="nav-bar">
+                <a href="/">Overview</a>
+                <a href="/#features">Features</a>
+                
+                <AuthorizeView>
+                    <Authorized>
+                        @*när vi är authorieserade så vill vi att detta ska synas nedan:*@
+                        <a href="/courses">Courses</a>
+                    </Authorized>
+                </AuthorizeView>
+                
+                <a href="/contacts">Contact</a>
+                <i class="fa-solid fa-bars-staggered"></i>
+            </nav>
+
+        </div>
+        <div class="right-side">
+            <div class="toggle-box">
+                <p>Light</p>
+                <i class="fa-sharp fa-light fa-brightness"></i>
+                <input type="checkbox" id="check">
+                <label for="check" class="button">
+                </label>
+                <p>Dark</p>
+                <i class="fa-regular fa-moon"></i>
+            </div>
+            <div class="account-buttons">
+
+                <AuthorizeView>
+                    <Authorized>
+                        <div class="profile">
+                            <div class="profile-image">
+                                <a asp-action="Details" asp-controller="Account">
+                                    <img src="~/images/uploads/profiles/@user.ProfileImage" />
+                                </a>
+                            </div>
+                        </div>
+                    </Authorized>
+                    <NotAuthorized>
+                        <a class="sign-in-btn" asp-action="SignIn" asp-controller="Auth"><i class="fa-regular fa-arrow-right-to-bracket"></i>Sign in</a>
+                        <a class="sign-up-btn" asp-action="SignUp" asp-controller="Auth"><i class="fa-regular fa-user"></i>Sign up</a>
+                    </NotAuthorized>
+                </AuthorizeView>
+            </div>
+        </div>
+    </div>
+</header>
