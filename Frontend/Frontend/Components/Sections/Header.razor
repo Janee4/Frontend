@@ -1,22 +1,22 @@
 ﻿<header>
     <div class="container">
         <div class="silicon-logo">
-            <a href="/">
-                <img src="images/logos/sillicons-logo.svg" alt="Sillicon">
+            <a href="">
+                <img src="/images/logos/sillicons-logo.svg" alt="Sillicon">
             </a>
 
             <nav class="nav-bar">
-                <a href="/">Overview</a>
-                <a href="/#features">Features</a>
+                <NavLink href="" Match="NavLinkMatch.All">Overview</NavLink>
+                <NavLink href="/#features">Features</NavLink>
                 
                 <AuthorizeView>
                     <Authorized>
                         @*när vi är authorieserade så vill vi att detta ska synas nedan:*@
-                        <a href="/courses">Courses</a>
+                        <NavLink href="/courses">Courses</NavLink>
                     </Authorized>
                 </AuthorizeView>
                 
-                <a href="/contacts">Contact</a>
+                <NavLink href="/contacts">Contact</NavLink>
                 <i class="fa-solid fa-bars-staggered"></i>
             </nav>
 
@@ -38,7 +38,7 @@
                         <div class="profile">
                             <div class="profile-image">
                                 <a href="/account/details">
-                                    <img src="~/images/uploads/profiles/@user.ProfileImage" /> @*Här hade hans "@user!.ProfileImage" testa och byta och se vad som händer eller fråga chatgpt*@
+                                    <img src="~/images/uploads/profiles/avatar.jpg" /> @*Här hade hans "@user!.ProfileImage" denna måste vi återställa SEN! min 1:24:30*@
                                 </a>
                             </div>
                         </div>
