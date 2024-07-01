@@ -1,0 +1,86 @@
+﻿@page "/subscribe"
+
+@code {
+    string statusMessage = "";
+
+    async Task Subscribe()
+    {
+        // Simulated subscription logic
+        await Task.Delay(1000); // Replace with actual subscription logic
+        statusMessage = "You have successfully subscribed!";
+    }
+}
+
+<section id="subscribe" class="newsletter">
+    <div class="container">
+        <div class="newsletter-headline">
+            <h1>Don't Want to Miss Anything</h1>
+            <img src="/images/icons/swirl-arrow-icon.png" alt="swirl arrow" />
+        </div>
+        <form @onsubmit="Subscribe">
+            <div class="newsletter-choices">
+                <h4>Sign up for Newsletter</h4>
+
+                <div class="boxes">
+                    <div class="checkbox-group">
+                        <div class="check-box">
+                            <input type="checkbox" />
+                            <label>Daily Newsletter</label>
+                        </div>
+                    </div>
+                    <div class="checkbox-group">
+                        <div class="check-box">
+                            <input type="checkbox" />
+                            <label>Advertising Updates</label>
+                        </div>
+                    </div>
+                    <div class="checkbox-group">
+                        <div class="check-box">
+                            <input type="checkbox" />
+                            <label>Weekly In Review</label>
+                        </div>
+                    </div>
+                    <div class="checkbox-group">
+                        <div class="check-box">
+                            <input type="checkbox" />
+                            <label>Event Updates</label>
+                        </div>
+                    </div>
+                    <div class="checkbox-group">
+                        <div class="check-box">
+                            <input type="checkbox" />
+                            <label>Startups Weekly</label>
+                        </div>
+                    </div>
+                    <div class="checkbox-group">
+                        <div class="check-box">
+                            <input type="checkbox" />
+                            <label>Podcasts</label>
+                        </div>
+                    </div>
+                    <!-- Add more checkbox groups as needed -->
+                </div>
+            </div>
+
+            <div class="subscribe-newsletter">
+                <div class="email-subscription">
+                    <div class="input-icon-container">
+                        <i class="fa-regular fa-envelope"></i>
+                        <input type="email" placeholder="Your Email" />
+                    </div>
+                    <button type="submit" class="subscribe-btn">
+                        <p>Subscribe</p>
+                    </button>
+                </div>
+                @if (!string.IsNullOrEmpty(statusMessage))
+                {
+                    <span class="status-message">@statusMessage</span>
+                }
+                else
+                {
+                    <p class="status-message"><span>*</span> Yes, I agree to the <span>terms</span> and <span>privacy policy</span>.</p>
+                }
+            </div>
+        </form>
+    </div>
+</section>
