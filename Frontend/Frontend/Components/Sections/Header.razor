@@ -1,9 +1,10 @@
 ﻿<header>
     <div class="container">
         <div class="silicon-logo">
-            <a asp-action="Home" asp-controller="Default">
+            <a href="/">
                 <img src="images/logos/sillicons-logo.svg" alt="Sillicon">
             </a>
+
             <nav class="nav-bar">
                 <a href="/">Overview</a>
                 <a href="/#features">Features</a>
@@ -36,8 +37,8 @@
                     <Authorized>
                         <div class="profile">
                             <div class="profile-image">
-                                <a asp-action="Details" asp-controller="Account">
-                                    <img src="~/images/uploads/profiles/@user.ProfileImage" />
+                                <a href="/account/details">
+                                    <img src="~/images/uploads/profiles/@user.ProfileImage" /> @*Här hade hans "@user!.ProfileImage" testa och byta och se vad som händer eller fråga chatgpt*@
                                 </a>
                             </div>
                         </div>
