@@ -5,40 +5,38 @@
                 <img src="/images/logos/sillicons-logo.svg" alt="Sillicon">
             </a>
 
-            <nav class="nav-bar">
-                <NavLink href="" Match="NavLinkMatch.All">Overview</NavLink>
-                <NavLink href="/#features">Features</NavLink>
-                
-                <AuthorizeView>
-                    <Authorized>
-                        @*när vi är authorieserade så vill vi att detta ska synas nedan:*@
-                        <NavLink href="/courses">Courses</NavLink>
-                    </Authorized>
-                </AuthorizeView>
-                
-                <NavLink href="/contacts">Contact</NavLink>
-                <i class="fa-solid fa-bars-staggered"></i>
-            </nav>
+            <div class="nav-bar">
+                <nav>
+                    <NavLink href="" Match="NavLinkMatch.All">Overview</NavLink>
+                    <NavLink href="/#features">Features</NavLink>
 
+                    <AuthorizeView>
+                        <Authorized>
+                            <NavLink href="/courses">Courses</NavLink>
+                        </Authorized>
+                    </AuthorizeView>
+
+                    <NavLink href="/contacts">Contact</NavLink>
+                    <i class="fa-solid fa-bars-staggered"></i>
+                </nav>
+            </div>
         </div>
         <div class="right-side">
             <div class="toggle-box">
                 <p>Light</p>
                 <i class="fa-sharp fa-light fa-brightness"></i>
                 <input type="checkbox" id="check">
-                <label for="check" class="button">
-                </label>
+                <label for="check" class="button"></label>
                 <p>Dark</p>
                 <i class="fa-regular fa-moon"></i>
             </div>
             <div class="account-buttons">
-
                 <AuthorizeView>
                     <Authorized>
                         <div class="profile">
                             <div class="profile-image">
                                 <a href="/account/details">
-                                    <img src="~/images/uploads/profiles/avatar.jpg" /> @*Här hade hans "@user!.ProfileImage" denna måste vi återställa SEN! min 1:24:30*@
+                                    <img src="~/images/uploads/profiles/avatar.jpg" />
                                 </a>
                             </div>
                         </div>
@@ -52,3 +50,5 @@
         </div>
     </div>
 </header>
+
+

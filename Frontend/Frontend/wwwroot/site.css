@@ -586,55 +586,51 @@ footer .container .copyright {
   margin-bottom: 2rem;
 }
 
+/* Header container styles */
 header .container {
-  display: flex;
-  width: 100%;
-  justify-content: space-between;
-  overflow: hidden;
-}
-header .container .silicon-logo {
-  margin-left: 1rem;
-  margin-top: 1rem;
-  display: flex;
-}
-@media (min-width: 1575px) {
-  header .container .silicon-logo {
     display: flex;
-    margin-left: 20rem;
-    margin-top: 1rem;
-  }
+    width: 100%;
+    justify-content: space-between;
+    overflow: hidden;
 }
+
+    /* Silicon logo styles */
+    header .container .silicon-logo {
+        margin-left: 1rem;
+        margin-top: 1rem;
+        display: flex;
+    }
+
 @media (min-width: 1575px) {
-  header .container .silicon-logo .nav-bar {
-    display: block;
-    height: 2rem;
-    margin-left: 3rem;
-    margin-top: 0.7rem;
-  }
+    header .container .silicon-logo {
+        display: flex;
+        margin-left: 20rem;
+        margin-top: 1rem;
+    }
 }
-header .container .silicon-logo .nav-bar a {
-  display: none;
-  text-decoration: none;
-  color: rgba(0, 0, 0, 0.8549019608);
-  margin-right: 2rem;
-  font-family: "Manrope", sans-serif;
-  font-weight: 600;
-}
-@media (min-width: 1575px) {
-  header .container .silicon-logo .nav-bar a {
-    display: inline-block;
-  }
-}
-header .container .silicon-logo .nav-bar i {
-  margin-left: 1rem;
-  margin-top: 0.6rem;
-  font-size: 25px;
-}
-@media (min-width: 1575px) {
-  header .container .silicon-logo .nav-bar i {
-    display: none;
-  }
-}
+        /* Nav bar styles */
+        header .container .silicon-logo .nav-bar {
+            display: block;
+            margin-left: 3rem; /* Justera vänstermarginalen efter behov */
+            margin-top: 0.7rem;
+        }
+
+        /* Stilar för länkar */
+        header .container .silicon-logo nav a {
+            text-decoration: none;
+            color: rgba(0, 0, 0, 0.85);
+            margin-right: 2rem;
+            font-family: "Manrope", sans-serif;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+            /* Stil för den aktiva länken */
+            header .container .silicon-logo nav a.active {
+                color: #6366F1; /* Färg för den aktiva länken */
+                font-weight: 700; /* Fet stil för den aktiva länken */
+            }
+
 header .container .right-side {
   display: flex;
   justify-content: flex-end;
