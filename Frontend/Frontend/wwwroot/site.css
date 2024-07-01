@@ -608,149 +608,169 @@ header .container {
         margin-top: 1rem;
     }
 }
-        /* Nav bar styles */
-        header .container .silicon-logo .nav-bar {
-            display: block;
-            margin-left: 3rem; /* Justera vänstermarginalen efter behov */
-            margin-top: 0.7rem;
-        }
-
-        /* Stilar för länkar */
-        header .container .silicon-logo nav a {
-            text-decoration: none;
-            color: rgba(0, 0, 0, 0.85);
-            margin-right: 2rem;
-            font-family: "Manrope", sans-serif;
-            font-weight: 600;
-            transition: color 0.3s ease;
-        }
-
-            /* Stil för den aktiva länken */
-            header .container .silicon-logo nav a.active {
-                color: #6366F1; /* Färg för den aktiva länken */
-                font-weight: 700; /* Fet stil för den aktiva länken */
-            }
-
-header .container .right-side {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  position: relative;
-  padding: 1.1rem 0rem;
-}
-@media (min-width: 1575px) {
-  header .container .right-side {
-    margin-right: 20rem;
-  }
-}
-header .container .right-side .toggle-box {
-  display: flex;
-  background-color: #fff;
-  margin: 0.5rem;
-  gap: 0.5rem;
-  height: 2rem;
-}
-@media (min-width: 1575px) {
-  header .container .right-side .toggle-box {
-    position: relative;
-    margin-right: 4rem;
-    gap: 1rem;
-  }
-}
-header .container .right-side .toggle-box p {
-  display: none;
-}
-@media (min-width: 1575px) {
-  header .container .right-side .toggle-box p {
+/* Nav bar styles */
+header .container .silicon-logo .nav-bar {
     display: block;
-    margin-top: 2px;
-    font-size: 16px;
+    margin-left: 3rem; /* Justera vänstermarginalen efter behov */
+    margin-top: 0.7rem;
+}
+
+/* Stilar för länkar */
+header .container .silicon-logo nav a {
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.85);
+    margin-right: 2rem;
     font-family: "Manrope", sans-serif;
     font-weight: 600;
-  }
+    transition: color 0.3s ease;
 }
-header .container .right-side .toggle-box i {
-  margin-top: 5px;
+    /* Stil för den aktiva länken */
+    header .container .silicon-logo nav a.active,
+    header .container .silicon-logo nav a:hover {
+        color: #6366F1; /* Lila färg för hovrings-effekt och den aktiva länken */
+        font-weight: 700; /* Fet stil för den aktiva länken */
+    }
+
+header .container .right-side {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: relative;
+    padding: 1.1rem 0rem;
 }
+
 @media (min-width: 1575px) {
-  header .container .right-side .toggle-box i {
+    header .container .right-side {
+        margin-right: 20rem;
+    }
+}
+
+header .container .right-side .toggle-box {
+    display: flex;
+    background-color: #fff;
+    margin: 0.5rem;
+    gap: 0.5rem;
+    height: 2rem;
+}
+
+@media (min-width: 1575px) {
+    header .container .right-side .toggle-box {
+        position: relative;
+        margin-right: 4rem;
+        gap: 1rem;
+    }
+}
+
+header .container .right-side .toggle-box p {
     display: none;
-  }
 }
+
+@media (min-width: 1575px) {
+    header .container .right-side .toggle-box p {
+        display: block;
+        margin-top: 2px;
+        font-size: 16px;
+        font-family: "Manrope", sans-serif;
+        font-weight: 600;
+    }
+}
+
+header .container .right-side .toggle-box i {
+    margin-top: 5px;
+}
+
+@media (min-width: 1575px) {
+    header .container .right-side .toggle-box i {
+        display: none;
+    }
+}
+
 header .container .right-side .toggle-box #check {
-  display: none;
-  position: relative;
+    display: none;
+    position: relative;
 }
+
 header .container .right-side .toggle-box .button {
-  background-color: rgba(69, 70, 97, 0.8156862745);
-  width: 40px;
-  height: 20px;
-  margin-top: 0.2rem;
-  border-radius: 200px;
-  cursor: pointer;
-  box-shadow: 0 8px 12px rgba(54, 59, 122, 0.199);
+    background-color: rgba(69, 70, 97, 0.8156862745);
+    width: 40px;
+    height: 20px;
+    margin-top: 0.2rem;
+    border-radius: 200px;
+    cursor: pointer;
+    box-shadow: 0 8px 12px rgba(54, 59, 122, 0.199);
 }
-header .container .right-side .toggle-box .button::before {
-  position: absolute;
-  content: "";
-  background-color: #fff;
-  width: 18px;
-  height: 18px;
-  border-radius: 200px;
-  margin: 1px;
-}
+
+    header .container .right-side .toggle-box .button::before {
+        position: absolute;
+        content: "";
+        background-color: #fff;
+        width: 18px;
+        height: 18px;
+        border-radius: 200px;
+        margin: 1px;
+    }
+
 header .container .right-side .toggle-box input:checked + .button {
-  background-color: #20096d;
+    background-color: #20096d;
 }
-header .container .right-side .toggle-box input:checked + .button::before {
-  transform: translateX(-20px);
-  transform: translateX(20px);
-}
+
+    header .container .right-side .toggle-box input:checked + .button::before {
+        transform: translateX(-20px);
+        transform: translateX(20px);
+    }
+
 header .container .right-side .account-buttons {
-  display: flex;
-  gap: 10px;
-  align-items: center;
+    display: flex;
+    gap: 10px;
+    align-items: center;
 }
-header .container .right-side .account-buttons .sign-in-btn,
-header .container .right-side .account-buttons .sign-up-btn {
-  text-decoration: none;
-  color: #ffffff;
-  padding: 10px 20px;
-  border-radius: 5px;
-  cursor: pointer;
-  font-family: "Manrope", sans-serif;
-  font-weight: 600;
-  display: flex;
-  align-items: center;
-}
-header .container .right-side .account-buttons .sign-in-btn i,
-header .container .right-side .account-buttons .sign-up-btn i {
-  margin-right: 5px;
-}
-header .container .right-side .account-buttons .sign-in-btn {
-  background-color: #EFF2FC;
-  color: #33354D;
-}
-header .container .right-side .account-buttons .sign-up-btn {
-  background-color: #6366F1;
-}
-header .container .right-side .account-buttons .sign-in-btn:hover,
-header .container .right-side .account-buttons .sign-up-btn:hover {
-  transform: scale(1.05);
-  transition: transform 0.2s ease-in-out;
-}
+
+    header .container .right-side .account-buttons .sign-in-btn,
+    header .container .right-side .account-buttons .sign-up-btn {
+        text-decoration: none;
+        color: #ffffff;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-family: "Manrope", sans-serif;
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+    }
+
+        header .container .right-side .account-buttons .sign-in-btn i,
+        header .container .right-side .account-buttons .sign-up-btn i {
+            margin-right: 5px;
+        }
+
+    header .container .right-side .account-buttons .sign-in-btn {
+        background-color: #EFF2FC;
+        color: #33354D;
+    }
+
+    header .container .right-side .account-buttons .sign-up-btn {
+        background-color: #6366F1;
+    }
+
+        header .container .right-side .account-buttons .sign-in-btn:hover,
+        header .container .right-side .account-buttons .sign-up-btn:hover {
+            transform: scale(1.05);
+            transition: transform 0.2s ease-in-out;
+        }
+
 header .container .right-side .profile-image {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  overflow: hidden;
-  margin-right: 10px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 10px;
 }
-header .container .right-side .profile-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
+
+    header .container .right-side .profile-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
 
 .newsletter {
   background-color: #F3F6FF;
