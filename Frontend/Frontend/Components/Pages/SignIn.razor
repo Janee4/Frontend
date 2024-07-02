@@ -11,6 +11,74 @@
 
 <PageTitle>Log in</PageTitle>
 
+<section class="signin">
+    <div class="container">
+
+        @if (!string.IsNullOrEmpty(ErrorMessage)) //Om errormessage inte är tomt, så skriver vi ut errormessage.
+        {
+            <div class="alert alert-danger">
+                @ErrorMessage
+            </div>
+        }
+
+        <EditForm Model="Input" asp-route-returnUrl="@ReturnUrl" method="post" OnValidSubmit="LoginUser" FormName="signin" novalidate>
+            <DataAnnotationsValidator />
+
+            <h1>Welcome back</h1>
+            <p>Don't have an account yet? <a href="/signup">Sign up here</a></p>
+
+
+            <div class="form-content">
+                <div id="form-email" class="input-group">
+                    <label>Email</label>
+                    <InputText type="email" @bind-Value="Input.Email" class="form-control" autocomplete="email" aria-required="true" placeholder="Enter your email" />
+                </div>
+                <div id="form-password" class="input-group">
+                    <label>Password</label>
+                    <InputText type="password" @bind-Value="Input.Password" class="form-control" autocomplete="password" aria-required="true" placeholder="Enter your password" />
+                </div>
+                <div id="form-checkbox" class="checkbox-group">
+                    <div class="input-group">
+                        <InputCheckbox @bind-Value="Input.RememberMe" class="form-control" autocomplete="rememberme" />
+                        <label>Remember me</label>
+                    </div>
+                </div>
+                <div id="form-button">
+                    <button type="submit" class="btn btn-theme"><i class=" fa-regular fa-arrow-right-to-bracket"></i>Sign in</button>
+                </div>
+            </div>
+        </EditForm>
+
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <h1>Log in</h1>
 <div class="row">
     <div class="col-md-4">
