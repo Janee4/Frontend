@@ -7,6 +7,7 @@
 @using Microsoft.AspNetCore.Identity
 @using Microsoft.AspNetCore.WebUtilities
 @using Frontend.Data
+@using Microsoft.EntityFrameworkCore
 
 @inject UserManager<ApplicationUser> UserManager
 @inject SignInManager<ApplicationUser> SignInManager
@@ -102,6 +103,14 @@
             UserName = Input.Email, 
             Email = Input.Email 
         };
+
+        if (await UserManager.Users.AnyAsync( x => x.Email == user.Email))
+        {
+            ErrorMessage = "Email already in use.";
+            return;
+        }
+
+
 
         //usermanager som ska skapa en användare, om den inte lyckas så gör den en return
         var result = await UserManager.CreateAsync(user, Input.Password);
