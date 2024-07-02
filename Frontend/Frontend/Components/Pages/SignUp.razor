@@ -31,7 +31,7 @@
         <EditForm Model="Input" asp-route-returnUrl="@ReturnUrl" method="post" OnValidSubmit="RegisterUser" FormName="signup" novalidate>
             <DataAnnotationsValidator />
             <AntiforgeryToken />
-            <H1>Create Account</H1>
+            <h1>Create Account</h1>
             <p>Already have an account? <a href="/signin">Sign in here</a></p>
 
 
@@ -42,26 +42,26 @@
                 <div id="form-firstname" class="input-group">
                     <label>First name</label>
                     <InputText @bind-Value="Input.FirstName" class="form-control" autocomplete="givenname" aria-required="true" placeholder="Enter your first name" />
-                    <ValidationMessage For="() => Input.FirstName"/>
+                    <ValidationMessage For="() => Input.FirstName" />
                 </div>
                 
                 
                 
                 <div id="form-lastname" class="input-group">
-                    <label asp-for="LastName"></label>
-                    <input asp-for="LastName" />
-                    <span asp-validation-for="LastName"></span>
+                    <label>Last name</label>
+                    <InputText @bind-Value="Input.LastName" class="form-control" autocomplete="surname" aria-required="true" placeholder="Enter your last name" />
+                    <ValidationMessage For="() => Input.LastName" />
                 </div>
 
                 <div id="form-email" class="input-group">
-                    <label asp-for="Email"></label>
-                    <input asp-for="Email" />
-                    <span asp-validation-for="Email"></span>
+                    <label>Email</label>
+                    <InputText type = "email" @bind-Value="Input.Email" class="form-control" autocomplete="email" aria-required="true" placeholder="Enter your email" />
+                    <ValidationMessage For="() => Input.Email" />
                 </div>
                 <div id="form-password" class="input-group">
-                    <label asp-for="Password"></label>
-                    <input asp-for="Password" />
-                    <span asp-validation-for="Password"></span>
+                    <label>Password</label>
+                    <InputText type="password" @bind-Value="Input.Password" class="form-control" autocomplete="password" aria-required="true" placeholder="Enter your password" />
+                    <ValidationMessage For="() => Input.Password" />
                 </div>
                 <div id="form-confirmpassword" class="input-group">
                     <label asp-for="ConfirmPassword"></label>
