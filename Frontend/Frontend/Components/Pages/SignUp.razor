@@ -21,10 +21,10 @@
 <section class="signUp">
     <div class="container">
 
-        @if (!string.IsNullOrEmpty(ViewData["StatusMessage"]?.ToString()))
+        @if (!string.IsNullOrEmpty(ErrorMessage)) //Om errormessage inte är tomt, så skriver vi ut errormessage.
         {
             <div class="alert alert-danger">
-                @ViewData["StatusMessage"]
+                @ErrorMessage
             </div>
         }
 
@@ -84,6 +84,8 @@
 
 
 @code {
+
+    private string? ErrorMessage { get; set; }
 
     [SupplyParameterFromForm]
     private InputModel Input { get; set; } = new();
