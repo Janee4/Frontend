@@ -36,17 +36,13 @@
 
 
             <div class="form-content">
-                
 
-                
                 <div id="form-firstname" class="input-group">
                     <label>First name</label>
                     <InputText @bind-Value="Input.FirstName" class="form-control" autocomplete="givenname" aria-required="true" placeholder="Enter your first name" />
                     <ValidationMessage For="() => Input.FirstName" />
                 </div>
-                
-                
-                
+                   
                 <div id="form-lastname" class="input-group">
                     <label>Last name</label>
                     <InputText @bind-Value="Input.LastName" class="form-control" autocomplete="surname" aria-required="true" placeholder="Enter your last name" />
@@ -64,16 +60,16 @@
                     <ValidationMessage For="() => Input.Password" />
                 </div>
                 <div id="form-confirmpassword" class="input-group">
-                    <label asp-for="ConfirmPassword"></label>
-                    <input asp-for="ConfirmPassword" />
-                    <span asp-validation-for="ConfirmPassword"></span>
+                    <label>Confirm password</label>
+                    <InputText type="password" @bind-Value="Input.ConfirmPassword" class="form-control" autocomplete="confirm" aria-required="true" placeholder="Confirm your password" />
+                    <ValidationMessage For="() => Input.ConfirmPassword" />
                 </div>
                 <div id="form-checkbox" class="checkbox-group">
                     <div class="input-group">
-                        <input asp-for="TermsAndConditions" />
-                        <label asp-for="TermsAndConditions"></label>
+                        <InputCheckbox @bind-Value="Input.TermsAndConditions" class="form-control" autocomplete="terms" aria-required="true" />
+                        <label>I accept the terms and conditions</label>
                     </div>
-                    <span asp-validation-for="TermsAndConditions"></span>
+                    <ValidationMessage For="() => Input.TermsAndConditions" />
                 </div>
                 <div id="form-button">
                     <button type="submit" class="btn btn-theme">Sign up</button>
