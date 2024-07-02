@@ -1,6 +1,12 @@
-﻿namespace WebApp.wwwroot.css.scss.components
-{
-    public class _forms
-    {
+﻿namespace WebApp.wwwroot.css.scss.components {
+    public class _forms {
+
+        .field-validation-error, //OBS DETTA VAR VAD HANS HADE KOPIERADE RAKT AV.
+        .validation-message {
+            font-size: 14px;
+            font-weight: 400 !important;
+            color: var(--color-danger-dark);
+            padding: 2px 5px;
+        }
     }
 }

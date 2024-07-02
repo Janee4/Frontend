@@ -30,7 +30,7 @@
 
         <EditForm Model="Input" asp-route-returnUrl="@ReturnUrl" method="post" OnValidSubmit="RegisterUser" FormName="signup" novalidate>
             <DataAnnotationsValidator />
-            <AntiforgeryToken />
+
             <h1>Create Account</h1>
             <p>Already have an account? <a href="/signin">Sign in here</a></p>
 
