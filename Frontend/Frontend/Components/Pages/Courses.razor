@@ -1,0 +1,75 @@
+﻿@page "/courses" 
+
+<PageTitle>Courses</PageTitle>
+
+
+<section class="courses">
+    <div class="container">
+        <div class="title-form-div">
+            <h1>Courses</h1>
+            <div class="categories-to-right">
+                <form id="form-filters">
+                    <select>
+                        <option>All categories</option>
+                    </select>
+                    <div class="input-search-group">
+                        <input id="searchQuery" name="searchQuery" placeholder="Search courses" />
+                        <i class="fa-regular fa-search"></i>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+
+        <div class="course-items">
+            @if (Model.Courses != null)
+            {
+                @foreach (var course in Model.Courses)
+                {
+                    <a class="course" asp-action="Details" asp-controller="Courses" asp-route-id="@course.Id">
+                        @if (course.IsBestSeller)
+                        {
+                            <div class="bestseller">Best Seller</div>
+                        }
+
+                        <span class="btn btn-circle bookmark"><i class="fa-regular fa-bookmark"></i></span>
+
+                        <img src="~/images/courses/@($"courses_{course.Id}.jpg")" alt="@course.Title" />
+
+                        <div class="content">
+                            <h5 class="title">@course.Title</h5>
+                            <p class="author">By @course.Author</p>
+                            <div class="pricing">
+                                @if (!string.IsNullOrEmpty(course.DiscountPrice))
+                                {
+                                    <div class="discount">@course.DiscountPrice</div>
+                                }
+                                <div class="price @(!string.IsNullOrEmpty(course.DiscountPrice)? "discount-enabled" : "")">@course.Price</div>
+                            </div>
+                            <div class="footer">
+                                <div class="hours">
+                                    <i class="fa-regular fa-clock"></i> @course.Hours hours
+                                </div>
+                                <div class="likes">
+                                    <i class="fa-regular fa-thumbs-up"></i> @course.LikesInProcent (@course.LikesInNumbers)
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                }
+            }
+        </div>
+    </div>
+    <div class="work-with-us">
+        <div class="container">
+            <div class="left-side">
+                <h5>Ready to get started?</h5>
+                <h1>Take Your Skills to the<br /> Next Level</h1>
+                <button>Work with us</button>
+            </div>
+            <div class="right-side">
+                <img src="~/images/logos/illustration.svg" />
+            </div>
+        </div>
+    </div>
+</section>
