@@ -1,5 +1,11 @@
 ﻿@page "/courses" 
+@using Microsoft.AspNetCore.Authorization
 @attribute [StreamRendering]
+@attribute [Authorize] 
+<!-- med snabel A attribue [Authorize] så skyddar vi upp den så att inte vem som helst kan skriva tex http.loc
+
+alhost.7030/courses  och komma till Courses sidan. Nu måste man vara inloggad för att se Courses -->
+
 
 <PageTitle>Courses</PageTitle>
 
