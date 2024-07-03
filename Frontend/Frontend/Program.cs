@@ -34,7 +34,7 @@ builder.Services.AddIdentityCore<ApplicationUser>(options => options.SignIn.Requ
     .AddSignInManager()
     .AddDefaultTokenProviders();
 
-builder.Services.ConfigureApplicationCookie(x =>
+builder.Services.ConfigureApplicationCookie(x => // Denna används för när man tex skriver https://localhost:7152/courses så kommer man istället till sign in sidan
 {
     x.LoginPath = "/signin";
     x.Cookie.HttpOnly = true;
