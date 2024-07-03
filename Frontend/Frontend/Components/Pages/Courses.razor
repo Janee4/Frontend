@@ -23,13 +23,13 @@
 
 
         <div class="course-items">
-            @if (forecasts == null)
+            @if (courses == null)
             {
                 <p><em>Loading...</em></p>
             }
             else
             {
-                @foreach (var course in Model.Courses)
+                @foreach (var course in courses)
                 {
                     <a class="course" asp-action="Details" asp-controller="Courses" asp-route-id="@course.Id">
                         @if (course.IsBestSeller)
@@ -79,3 +79,28 @@
         </div>
     </div>
 </section>
+
+
+@code {
+    private CourseModel[]? courses;
+
+    protected override async Task OnInitializedAsync()
+    {
+
+    }
+
+    private class CourseModel
+    {
+        public int Id { get; set; }
+        public bool IsBestSeller { get; set; }
+        public string Image { get; set; } = null!;
+        public string Title { get; set; } = null!;
+        public string Author { get; set; } = null!;
+        public string Price { get; set; } = null!;
+        public string? DiscountPrice { get; set; }
+        public string Hours { get; set; } = null!;
+        public string LikesInProcent { get; set; } = null!;
+        public string LikesInNumbers { get; set; } = null!;
+    }
+
+   }
