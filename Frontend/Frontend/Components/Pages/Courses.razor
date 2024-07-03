@@ -1,5 +1,6 @@
 ﻿@page "/courses" 
 @attribute [StreamRendering]
+@inject HttpClient Http
 
 <PageTitle>Courses</PageTitle>
 
@@ -63,7 +64,6 @@
                     </a>
                 }
             }
-
         </div>
     </div>
     <div class="work-with-us">
@@ -86,7 +86,15 @@
 
     protected override async Task OnInitializedAsync()
     {
+        try
+        {
+            courses = await Http.GetFromJsonAsync<CourseModel[]>("courseprovider-win23jsbackend-hezhaaban.azurewebsites.net/api/courses");
 
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine(ex.Message);
+        }
     }
 
     private class CourseModel
