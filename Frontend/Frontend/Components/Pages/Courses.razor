@@ -1,6 +1,5 @@
 ﻿@page "/courses" 
 @attribute [StreamRendering]
-@inject HttpClient Http
 
 <PageTitle>Courses</PageTitle>
 
@@ -26,7 +25,7 @@
         <div class="course-items">
             @if (courses == null)
             {
-                <p><em>Loading...</em></p>
+                <p><em>No courses found yet. Please wait..</em></p>
             }
             else
             {
@@ -91,10 +90,7 @@
             courses = await Http.GetFromJsonAsync<CourseModel[]>("courseprovider-win23jsbackend-hezhaaban.azurewebsites.net/api/courses");
 
         }
-        catch (Exception ex)
-        {
-            Console.WriteLine(ex.Message);
-        }
+        catch (Exception ex){ }
     }
 
     private class CourseModel
