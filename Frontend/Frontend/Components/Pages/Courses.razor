@@ -1,4 +1,5 @@
 ﻿@page "/courses" 
+@attribute [StreamRendering]
 
 <PageTitle>Courses</PageTitle>
 
@@ -22,7 +23,11 @@
 
 
         <div class="course-items">
-            @if (Model.Courses != null)
+            @if (forecasts == null)
+            {
+                <p><em>Loading...</em></p>
+            }
+            else
             {
                 @foreach (var course in Model.Courses)
                 {
@@ -58,6 +63,7 @@
                     </a>
                 }
             }
+
         </div>
     </div>
     <div class="work-with-us">
