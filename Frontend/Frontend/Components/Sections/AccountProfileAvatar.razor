@@ -1,0 +1,45 @@
+﻿
+
+<AuthorizeView>
+        <Authorized>
+           <section class="account-profile">
+
+        <div class="profile">
+            <div class="profile-image">
+                <img src="/images/uploads/profiles/@user.ProfileImage" alt="@user.FirstName @user.LastName" />
+                <!--Hur du gör en fileupload videon KOLLA PÅ DEN-->
+                <EditForm enctype="multipart/form-data" method="post" Model="" FormName="ProfileUpload" OnValidSubmit="HandledProfileUpload">
+                    <input id="fileUploader" type="file" name="file" hidden />
+                    <label for="fileUploader" class="btn btn-circle btn-circle-sm"><i class="fa-regular fa-refresh"></i> </label>
+                </EditForm>
+            </div>
+            <div class="profile-info">
+                <h3 class="displayname"></h3>
+                <p></p>
+            </div>
+        </div>
+    </section>
+
+  </Authorized>
+</AuthorizeView>
+
+
+
+
+
+
+@code {
+    private ApplicationUser user = default!;
+
+    [CascadingParameter]
+    private HttpContext HttpContext { get; set; } = default!;
+
+    protected override async Task OnInitializedAsync()
+    {
+        user = await UserManager.GetUserAsync(HttpContext.User) ?? null!;
+
+    }
+
+
+
+}
