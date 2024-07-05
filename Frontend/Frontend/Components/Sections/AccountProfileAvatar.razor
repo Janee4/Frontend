@@ -9,7 +9,7 @@
                 <img src="/images/uploads/profiles/@user.ProfileImage" alt="@user.FirstName @user.LastName" />
                 <!--Hur du gör en fileupload videon KOLLA PÅ DEN-->
                 <EditForm enctype="multipart/form-data" method="post" Model="" FormName="ProfileUpload" OnValidSubmit="HandledProfileUpload">
-                    <input id="fileUploader" type="file" name="file" hidden />
+                    <InputFile id="fileUploader"  hidden />
                     <label for="fileUploader" class="btn btn-circle btn-circle-sm"><i class="fa-regular fa-refresh"></i> </label>
                 </EditForm>
             </div>
@@ -40,6 +40,15 @@
 
     }
 
+    public async Task HandledProfileUpload()
+    {
+        var result = await Http.PostAsync("https://fileprovider-win23jsbackend-hezhaaban.azurewebsites.net/api/Upload", 
+        new MultipartFormDataContent
+        {
+            {new StreamContent(await(await JSRuntime.InvokeAsync<IJSObjectReference>("FileUpload", "fileUploader")).InvokeAsyn<IJSObjectReference>("files"))[0].AsStream()), "file", "profile.jpg"}
+        });
+        
+    }
 
 
 }
